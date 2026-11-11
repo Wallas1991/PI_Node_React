@@ -1,37 +1,12 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
 import Header from './Header'
 import Menu from './ Menu'
+import Router from './router'
 
-function App() {
-  let contador = 0;
-  function increment() {
-    contador++;
-    console.log(contador)
-  }
-
+function App() { 
   return (
-
-    <>
-      <Header title="Bem vindo Wallas" />
-
-      <Menu />
-      <section id="center">
-
-        <div>
-          <h1>Home</h1>
-          <p><input type="button" value="Clique" onClick={increment} /></p>
-
-          <p>{contador}</p> cliques!
-        </div>
-      </section>
-
-      <section id="spacer"></section>
-    </>
-
+    <Router />
   )
 }
-export default App
+export default App;
